@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "MERN Blog API",
+    "_postman_id": "mern-blog-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Posts",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/posts"
+      }
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"Hello\", \"content\": \"First post\", \"author\": \"Me\"}"
+        },
+        "url": "http://localhost:5000/api/posts"
+      }
+    },
+    {
+      "name": "Get One (replace :id)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/posts/:id"
+      }
+    },
+    {
+      "name": "Update (replace :id)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"Edited\", \"content\": \"Updated\", \"author\": \"Me\"}"
+        },
+        "url": "http://localhost:5000/api/posts/:id"
+      }
+    },
+    {
+      "name": "Delete (replace :id)",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:5000/api/posts/:id"
+      }
+    }
+  ]
+}
